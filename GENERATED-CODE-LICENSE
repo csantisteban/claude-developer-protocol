@@ -1,0 +1,76 @@
+GENERATED CODE — OWNERSHIP, LICENSE, AND DISCLAIMER
+
+This project contains source code that was generated, in whole or in
+part, with the assistance of Claude, an AI assistant developed by
+Anthropic, PBC, operating under the Claude Developer Protocol workflow system.
+
+---
+
+1. OWNERSHIP OF GENERATED CODE
+
+Anthropic's Terms of Service state that users own the output they
+generate through Claude, subject to those terms. As of the date this
+workflow was authored, Anthropic does not claim intellectual property
+rights over outputs produced by users through its services.
+
+Reference: Anthropic Terms of Service — https://www.anthropic.com/legal/aup
+           Anthropic Usage Policy      — https://www.anthropic.com/legal/aup
+
+You are responsible for independently verifying Anthropic's current
+terms, as they may change. Nothing in this notice constitutes legal
+advice.
+
+All generated code delivered as part of this project is assigned to the
+client for the purposes for which it was commissioned. It may be used,
+modified, extended, and redistributed by the client without restriction,
+subject to any third-party licenses that may apply to libraries or
+dependencies referenced in that code.
+
+---
+
+2. AS-IS DISCLAIMER
+
+ALL GENERATED CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SECURITY,
+CORRECTNESS, OR NONINFRINGEMENT.
+
+Neither Carlos Silva-Santisteban nor any contributor to this project makes any
+representation or warranty that the generated code is free from defects,
+errors, vulnerabilities, or omissions.
+
+---
+
+3. LIMITATION OF LIABILITY
+
+THE PERSON OR ORGANISATION USING THIS CODE ASSUMES FULL RESPONSIBILITY
+FOR REVIEWING, TESTING, SECURING, AND VALIDATING ALL GENERATED CODE
+BEFORE DEPLOYING IT IN ANY ENVIRONMENT.
+
+IN NO EVENT SHALL CARLOS SILVA-SANTISTEBAN BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING
+BUT NOT LIMITED TO LOSS OF DATA, LOSS OF REVENUE, BUSINESS
+INTERRUPTION, SECURITY BREACHES, OR SYSTEM FAILURES) ARISING FROM THE
+USE OF OR RELIANCE ON GENERATED CODE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+---
+
+4. ANTHROPIC DISCLAIMER
+
+Anthropic, PBC is not a party to this project, has not reviewed the
+generated code, and makes no representations or warranties regarding
+it. References to Anthropic and its services are informational only.
+
+---
+
+5. RECOMMENDED PRACTICE
+
+Before deploying any AI-assisted code to a production environment, the
+responsible party should:
+
+  - Review all generated code for correctness and security
+  - Run automated tests appropriate to the stack
+  - Conduct a security review for any code handling user data,
+    authentication, payments, or sensitive operations
+  - Verify compliance with applicable laws and regulations

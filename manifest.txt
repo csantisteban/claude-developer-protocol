@@ -1,0 +1,52 @@
+# Protocol manifest - operator-owned paths excluded from install and update
+# Read by autoupdate.sh (every update) and install.sh (reinstall only) via
+# rsync --exclude-from
+# Follows rsync exclude pattern syntax. Lines starting with # are comments.
+# A leading / anchors a pattern to the sync root - it will not match a
+# same-named file/dir nested deeper in the tree. All patterns below are
+# anchored; add new ones the same way unless a pattern must intentionally
+# match at any depth.
+#
+# Everything NOT listed here is protocol-owned and will be replaced on update.
+# Add a path here only when operators or Claude are expected to edit or own that content.
+
+# Operator configuration
+/memory.md
+# work-session.md retired in 1.3.0, replaced by per-spec/per-task session.md.
+# Kept here so projects upgrading from pre-1.3.0 with a leftover file are not
+# overwritten by the update.
+/work-session.md
+/project.md
+/settings.local.json
+# local/overview.md is deployed on first install only (a starter note),
+# then operator-owned - a developer's personal instructions must not be
+# clobbered by updates.
+/local/overview.md
+# settings.json is deployed on first install only, then operator-owned -
+# projects customize their own tool permissions and updates must not clobber them.
+/settings.json
+
+# Operator-created numbered dirs (templates and 000-sync-memory are NOT excluded - they update freely)
+/specs/00[1-9]*/
+/specs/0[1-9][0-9]*/
+/specs/[1-9][0-9][0-9]*/
+/tasks/00[1-9]*/
+/tasks/0[1-9][0-9]*/
+/tasks/[1-9][0-9][0-9]*/
+
+# Operator-populated directories (protocol creates these empty, operator fills them)
+/knowledge/
+/snippets/
+/design/
+/.triage/
+/assets/
+
+# Seeded on first install, then operator-owned - not empty like the directories
+# above, but real content the operator customizes for their own project
+/architecture/
+/config/
+
+# Runtime state - never touched by updates
+/old-versions/
+/.last-update-check
+/.pinned-version

@@ -1,0 +1,37 @@
+site_name: Claude Developer Protocol
+site_url: https://csantisteban.github.io/claude-developer-protocol/
+repo_url: https://github.com/csantisteban/claude-developer-protocol
+repo_name: csantisteban/claude-developer-protocol
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Folder Reference: folder-reference.md
+  - Glossary: glossary.md
+  - Branching: branching.md
+  - Test Cases: test-cases.md
+  - Customization: customization.md
+  - Local Folder: local-folder.md
+  - Example Project: examples/example-project.md

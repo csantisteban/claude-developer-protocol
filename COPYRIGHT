@@ -1,0 +1,22 @@
+Claude Developer Protocol
+Copyright (c) 2025 Carlos Silva-Santisteban. All rights reserved.
+
+This workflow system — including all conventions, directory structures,
+task templates, specification templates, memory patterns, standards files,
+and the CLAUDE.md orchestration file — collectively referred to as
+"Claude Developer Protocol" — is the original work of Carlos Silva-Santisteban.
+
+Claude Developer Protocol is made available to clients under the terms of the LICENSE
+file included in this directory.
+
+The generated code produced by running Claude Developer Protocol within a client project
+is governed separately by the GENERATED-CODE-LICENSE file included in
+this directory.
+
+---
+
+Portions of Claude Developer Protocol are designed to be used with Claude, an AI
+assistant developed by Anthropic, PBC. Anthropic is not affiliated with,
+and does not endorse or warrant, Claude Developer Protocol or any output produced
+through its use. References to Anthropic products are for informational
+purposes only.
