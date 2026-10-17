@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read version
+        id: version
+        run: echo "version=$(cat version.txt)" >> "$GITHUB_OUTPUT"
+
+      # Zip everything except what came from src/github-release/, src/docs/,
+      # and scripts/ on the private side - an exclude list here stays small
+      # and stable, while an include list of every src/cdp/ path would grow
+      # and drift every time a new protocol file is added.
+      - name: Build release zip
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          zip -r "cdp-${VERSION}.zip" . \
+            -x ".git/*" ".github/*" "docs/*" "scripts/*" \
+            "CHANGELOG.md" "CONTRIBUTING.md" "README.md"
+
+      - name: Checksum
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          sha256sum "cdp-${VERSION}.zip" | awk '{print $1}' > "cdp-${VERSION}.zip.sha256"
+
+      - name: Write latest.txt
+        run: echo "${{ steps.version.outputs.version }}" > latest.txt
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cdp-${{ steps.version.outputs.version }}.zip
+            cdp-${{ steps.version.outputs.version }}.zip.sha256
+            latest.txt
